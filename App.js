@@ -1,19 +1,19 @@
 import { useState } from "react"
 
 function App() {
-  const [message, setMessage] = useState("")
+  const [show, setShow] = useState(false)
 
   function handleClick() {
-    setMessage("Button clicked! 🎉")
+    setShow(!show)
   }
 
   return (
-    <div style={{ padding: "40px", fontFamily: "Arial" }}>
+    <div style={{ padding: "40px" }}>
       <button onClick={handleClick}>
         Click me
       </button>
 
-      <p>{message}</p>
+      {show && <p>Hello Urooj 👋</p>}
     </div>
   )
 }
